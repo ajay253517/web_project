@@ -1,2 +1,3 @@
-# web_project
-Simple web app project
+# maven-project
+
+Simple Maven Project
