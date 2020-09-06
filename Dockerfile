@@ -1,6 +1,5 @@
-# Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+FROM maven:3.6.3-jdk-11
+COPY execute.sh /tmp/execute.sh
+RUN chmod 755 /tmp/execute.sh
+WORKDIR /var/web_project
+ENTRYPOINT /bin/sh /tmp/execute.sh
